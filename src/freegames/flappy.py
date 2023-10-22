@@ -48,7 +48,7 @@ def draw(alive):
 
 def move():
     """Update object positions."""
-    bird.y -= 5
+    bird.y -= 5 * 2
 
     for ball in balls:
         ball.x -= 3
