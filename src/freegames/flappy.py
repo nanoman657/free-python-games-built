@@ -51,7 +51,7 @@ def move():
     bird.y -= 5
 
     for ball in balls:
-        ball.x -= 3
+        ball.x -= 3 * 2
 
     if randrange(10) == 0:
         y = randrange(-199, 199)
