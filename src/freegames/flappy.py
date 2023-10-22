@@ -30,7 +30,6 @@ def inside(point):
 
 def draw(alive):
     """Draw screen objects."""
-    clear()
 
     goto(bird.x, bird.y)
 
@@ -43,6 +42,7 @@ def draw(alive):
         goto(ball.x, ball.y)
         dot(20, 'black')
 
+    clear()
     update()
 
 
