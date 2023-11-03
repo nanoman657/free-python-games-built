@@ -10,6 +10,7 @@ Exercises
 
 from random import *
 from turtle import *
+from time import time
 
 from freegames import vector
 
@@ -27,6 +28,7 @@ def inside(point):
     """Return True if point on screen."""
     return -200 < point.x < 200 and -200 < point.y < 200
 
+start_time = time()
 
 def draw(alive):
     """Draw screen objects."""
@@ -42,6 +44,14 @@ def draw(alive):
     for ball in balls:
         goto(ball.x, ball.y)
         dot(20, 'black')
+
+    goto(-200,-200)
+
+    time_elapsed = time() - start_time
+    raw_score = round(time_elapsed, 2) * 100
+    score = int(raw_score)
+
+    write(f"Score: {score}")
 
     update()
 
